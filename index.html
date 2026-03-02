@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocaditos Express | Tequeños y Pastelitos</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f59e0b', // Amber-500 (Tono más cálido y dorado)
+                            DEFAULT: '#d97706', // Amber-600 (Color masa horneada/frita)
+                            dark: '#b45309', // Amber-700
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-orange-50/30 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm transition-colors duration-300 border-b border-orange-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="img/logo.png" alt="Logo Bocaditos Express" class="h-14 w-auto object-contain drop-shadow-sm">
+                    <span class="font-serif font-bold text-2xl tracking-tight text-brand-dark dark:text-brand-light">Bocaditos Express</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center font-semibold text-gray-700 dark:text-gray-200">
+                    <a href="#inicio" class="hover:text-brand transition">Inicio</a>
+                    <a href="#quienes-somos" class="hover:text-brand transition">Quiénes Somos</a>
+                    <a href="#menu" class="hover:text-brand transition">Nuestro Menú</a>
+                    <a href="#galeria" class="hover:text-brand transition">Galería</a>
+                    <a href="#ubicacion" class="hover:text-brand transition">Ubicación</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-orange-100 dark:hover:bg-gray-700 transition text-brand">
+                        <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-orange-100 dark:hover:bg-gray-700 transition text-brand">
+                        <i id="theme-icon-mobile" class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-2xl text-brand focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-md border-t border-orange-50 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col font-semibold">
+                <a href="#inicio" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Inicio</a>
+                <a href="#quienes-somos" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Quiénes Somos</a>
+                <a href="#menu" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Nuestro Menú</a>
+                <a href="#galeria" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Galería</a>
+                <a href="#ubicacion" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Ubicación</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="pt-28 pb-12 md:pt-36 md:pb-24 px-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <h1 class="font-serif text-5xl md:text-6xl font-bold leading-tight text-gray-800 dark:text-white">
+                El sabor crujiente que <span class="text-brand italic">te alegra el día</span>
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+                Los mejores tequeños y pastelitos hechos con la receta original de la abuela. 100% artesanales y listos para disfrutar.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                <a href="#menu" class="bg-brand hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-brand/30 transition transform hover:scale-105">
+                    Ver Menú
+                </a>
+                <a href="#ubicacion" class="bg-orange-100 dark:bg-gray-800 hover:bg-orange-200 dark:hover:bg-gray-700 text-brand-dark dark:text-white font-bold py-3 px-8 rounded-full transition border border-orange-200 dark:border-gray-600">
+                    Visítanos
+                </a>
+            </div>
+        </div>
+        
+        <div class="md:w-1/2 w-full mt-8 md:mt-0 relative group">
+            <div class="absolute -inset-2 bg-gradient-to-r from-orange-300 to-brand rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                class="relative rounded-2xl shadow-2xl object-cover h-[390px] md:h-[580px] w-full border-4 border-white dark:border-gray-800"
+            >
+                <source src="video/0301.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300 border-y border-orange-100 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 text-center md:w-2/3">
+            <h2 class="font-serif text-4xl font-bold mb-8 text-brand-dark dark:text-brand-light">Quiénes Somos</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                En <strong>Bocaditos Express</strong> somos una familia apasionada por las buenas costumbres y el buen comer. Empezamos en nuestra cocina, buscando replicar ese sabor inconfundible del queso derretido en una masa perfecta. Hoy, llevamos nuestra tradición a tu mesa, garantizando ingredientes frescos y un crujido inolvidable en cada bocado.
+            </p>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 max-w-7xl mx-auto px-4">
+        <h2 class="font-serif text-4xl font-bold mb-12 text-center text-brand-dark dark:text-brand-light">Nuestro Menú</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-orange-100 dark:border-gray-700 hover:shadow-xl transition group">
+                <div class="h-58 bg-gray-300 overflow-hidden relative">
+                    <img src="img\teque_mejorado.png" alt="Tequeños de Queso" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="font-serif text-2xl font-bold mb-3 text-gray-800 dark:text-white">Tequeños Clásicos</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">La combinación perfecta: una masa dorada y extra crujiente por fuera, que esconde un corazón generoso de queso blanco derretido que se estira con cada mordisco. Te los entregamos calientitos, recién fritos y listos para devorar. Advertencia: ¡es físicamente imposible comerse solo uno!</p>
+                    <span class="font-bold text-brand text-2xl">$12.000 <span class="text-sm text-gray-500 font-normal">/ Docena</span></span>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-orange-100 dark:border-gray-700 hover:shadow-xl transition group">
+                <div class="h-58 bg-gray-300 overflow-hidden relative">
+                    <img src="img\pastel_mejorado.png" alt="Pastelitos de Carne" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="font-serif text-2xl font-bold mb-3 text-gray-800 dark:text-white">Pastelitos</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">Una verdadera obra de arte. Nuestra masa delgada y llena de burbujitas cruje al primer contacto, revelando un relleno jugoso, abundante y con ese sazón casero inconfundible. Fritos al punto exacto para que no queden grasosos, solo deliciosamente adictivos.</p>
+                    <span class="font-bold text-brand text-2xl">$15.000 <span class="text-sm text-gray-500 font-normal">/ Docena</span></span>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-orange-100 dark:border-gray-700 hover:shadow-xl transition group">
+                <div class="h-46 bg-gray-300 overflow-hidden relative">
+                    <img src="img\teque_mejorado2.png" alt="Bandeja Mixta" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="font-serif text-2xl font-bold mb-3 text-gray-800 dark:text-white">Listos para llevar</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">El secreto de nuestro sabor, directo a tu congelador. Preparados con la receta de siempre para que los degustes o los metas a la Airfryer cuando tú quieras. En pocos minutos tendrás esa explosión de queso derretido y masa doradita. ¡El salvavidas perfecto!</p>
+                    <span class="font-bold text-brand text-2xl">$25.000 <span class="text-sm text-gray-500 font-normal">/ Bandeja 20und</span></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="galeria" class="py-20 bg-orange-50/50 dark:bg-gray-800 transition-colors duration-300 border-t border-orange-100 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-serif text-4xl font-bold mb-12 text-center text-brand-dark dark:text-brand-light">Nuestras Creaciones</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="img/teque1.jpeg" alt="Galería 1" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/teque2.jpeg" alt="Galería 2" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/teque3.jpeg" alt="Galería 3" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/teque4.jpeg" alt="Galería 4" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/teque5.jpeg" alt="Galería 5" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/pastel1.jpeg" alt="Galería 6" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/pastel2.jpeg" alt="Galería 7" class="w-full h-72 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/pastel3.jpeg" alt="Galería 8" class="w-full h-72 object-cover rounded-xl shadow-xl hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/teque6.png" alt="Galería 9" class="w-full h-84 object-cover rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+                <img src="img/teque7.png" alt="Galería 10" class="w-full h-84 object-cover rounded-xl shadow-xl hover:shadow-xl transition duration-300 cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-20 max-w-7xl mx-auto px-4">
+        <h2 class="font-serif text-4xl font-bold mb-6 text-center text-brand-dark dark:text-brand-light">Nuestra Ubicación</h2>
+        <p class="text-center text-lg text-gray-600 dark:text-gray-400 mb-10">Ven a recoger tu pedido o encuéntranos en nuestro punto de venta.</p>
+        
+        <div class="w-full md:w-3/4 lg:w-2/3 mx-auto h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-800">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.539480890414!2d-68.26848522488719!3d10.171661384841805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e808d84473ebb81%3A0x8f28edd51736ac72!2sBocaditos%20Express%20bj!5e1!3m2!1ses!2sco!4v1772347576774!5m2!1ses!2sco" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-gray-900 border-t border-orange-200 dark:border-gray-800 pt-12 pb-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="font-serif font-bold text-2xl mb-6 text-gray-800 dark:text-white">Síguenos en nuestras redes</h3>
+            <div class="flex justify-center space-x-8 mb-10">
+                <a href="https://www.facebook.com/milagros.barrios.165" class="text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-white text-4xl transition transform hover:-translate-y-2">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/_u/bocaditosexpressbj" class="text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-white text-4xl transition transform hover:-translate-y-2">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@bocaditosexpressbj" class="text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-white text-4xl transition transform hover:-translate-y-2">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                © 2026 Bocaditos Express. | Creado por Yisus Sánchez | Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/584128896810?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Bocaditos%20Express!" target="_blank" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 text-4xl flex items-center justify-center w-16 h-16 transition transform hover:scale-110 animate-bounce">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+        const html = document.documentElement;
+
+        function setTheme(isDark) {
+            if (isDark) {
+                html.classList.add('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                themeIconMobile.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                themeIconMobile.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        const toggleTheme = () => {
+            const isDark = html.classList.contains('dark');
+            setTheme(!isDark);
+        };
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        themeToggleBtnMobile.addEventListener('click', toggleTheme);
+    </script>
+</body>
+</html>
