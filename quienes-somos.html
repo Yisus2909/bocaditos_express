@@ -3,43 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bocaditos Express | Tequeños y Pastelitos</title>
-    
+    <title>Quiénes Somos | Bocaditos Express</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Nunito', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
-                    },
-                    colors: {
-                        brand: {
-                            light: '#f59e0b', // Amber-500 (Tono más cálido y dorado)
-                            DEFAULT: '#d97706', // Amber-600 (Color masa horneada/frita)
-                            dark: '#b45309', // Amber-700
-                        }
-                    }
+                    fontFamily: { sans: ['Nunito', 'sans-serif'], serif: ['Lora', 'serif'] },
+                    colors: { brand: { light: '#f59e0b', DEFAULT: '#d97706', dark: '#b45309' } }
                 }
             }
         }
     </script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        body { transition: background-color 0.3s ease, color 0.3s ease; }
-    </style>
 </head>
 <body class="bg-orange-50/30 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased">
-
     <nav class="fixed w-full z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm transition-colors duration-300 border-b border-orange-100 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -47,19 +29,16 @@
                     <img src="img/logo.png" alt="Logo Bocaditos Express" class="h-14 w-auto object-contain drop-shadow-sm">
                     <span class="font-serif font-bold text-2xl tracking-tight text-brand-dark dark:text-brand-light">Bocaditos Express</span>
                 </div>
-
                 <div class="hidden md:flex space-x-8 items-center font-semibold text-gray-700 dark:text-gray-200">
-                                        <a href="index.html" class="hover:text-brand transition">Inicio</a>
-                    <a href="quienes-somos.html" class="hover:text-brand transition">Quiénes Somos</a>
+                    <a href="index.html" class="hover:text-brand transition">Inicio</a>
+                    <a href="quienes-somos.html" class="text-brand">Quiénes Somos</a>
                     <a href="menu.html" class="hover:text-brand transition">Nuestro Menú</a>
                     <a href="galeria.html" class="hover:text-brand transition">Galería</a>
                     <a href="ubicacion.html" class="hover:text-brand transition">Ubicación</a>
-                    
                     <button id="theme-toggle" class="p-2 rounded-full hover:bg-orange-100 dark:hover:bg-gray-700 transition text-brand">
                         <i id="theme-icon" class="fa-solid fa-moon"></i>
                     </button>
                 </div>
-
                 <div class="md:hidden flex items-center gap-4">
                     <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-orange-100 dark:hover:bg-gray-700 transition text-brand">
                         <i id="theme-icon-mobile" class="fa-solid fa-moon"></i>
@@ -70,11 +49,10 @@
                 </div>
             </div>
         </div>
-
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-md border-t border-orange-50 dark:border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col font-semibold">
-                                <a href="index.html" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Inicio</a>
-                <a href="quienes-somos.html" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Quiénes Somos</a>
+                <a href="index.html" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Inicio</a>
+                <a href="quienes-somos.html" class="px-3 py-2 bg-orange-50 dark:bg-gray-800 text-brand rounded-md">Quiénes Somos</a>
                 <a href="menu.html" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Nuestro Menú</a>
                 <a href="galeria.html" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Galería</a>
                 <a href="ubicacion.html" class="px-3 py-2 hover:bg-orange-50 dark:hover:bg-gray-800 rounded-md">Ubicación</a>
@@ -82,57 +60,24 @@
         </div>
     </nav>
 
-        <section id="inicio" class="pt-28 pb-12 md:pt-36 md:pb-24 px-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        <div class="md:w-1/2 space-y-6 text-center md:text-left">
-            <h1 class="font-serif text-5xl md:text-6xl font-bold leading-tight text-gray-800 dark:text-white">
-                El sabor crujiente que <span class="text-brand italic">te alegra el día</span>
-            </h1>
-            <p class="text-lg text-gray-600 dark:text-gray-300">
-                Los mejores tequeños y pastelitos hechos con la receta original de la abuela. 100% artesanales y listos para disfrutar.
+    <main class="pt-32 pb-20">
+        <section class="max-w-7xl mx-auto px-4 text-center md:w-2/3">
+            <h2 class="font-serif text-4xl font-bold mb-8 text-brand-dark dark:text-brand-light">Quiénes Somos</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                En <strong>Bocaditos Express</strong> somos una familia apasionada por las buenas costumbres y el buen comer. Empezamos en nuestra cocina, buscando replicar ese sabor inconfundible del queso derretido en una masa perfecta. Hoy, llevamos nuestra tradición a tu mesa, garantizando ingredientes frescos y un crujido inolvidable en cada bocado.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                <a href="menu.html" class="bg-brand hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-brand/30 transition transform hover:scale-105">
-                    Ver Menú
-                </a>
-                <a href="ubicacion.html" class="bg-orange-100 dark:bg-gray-800 hover:bg-orange-200 dark:hover:bg-gray-700 text-brand-dark dark:text-white font-bold py-3 px-8 rounded-full transition border border-orange-200 dark:border-gray-600">
-                    Visítanos
-                </a>
-            </div>
-        </div>
-        
-        <div class="md:w-1/2 w-full mt-8 md:mt-0 relative group">
-            <div class="absolute -inset-2 bg-gradient-to-r from-orange-300 to-brand rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-            
-            <video 
-                autoplay 
-                loop 
-                muted 
-                playsinline 
-                class="relative rounded-2xl shadow-2xl object-cover h-[390px] md:h-[580px] w-full border-4 border-white dark:border-gray-800"
-            >
-                <source src="video/0301.mp4" type="video/mp4">
-                Tu navegador no soporta el formato de video.
-            </video>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="bg-white dark:bg-gray-900 border-t border-orange-200 dark:border-gray-800 pt-12 pb-8 transition-colors duration-300">
+    <footer class="bg-white dark:bg-gray-900 border-t border-orange-200 dark:border-gray-800 pt-12 pb-8">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h3 class="font-serif font-bold text-2xl mb-6 text-gray-800 dark:text-white">Síguenos en nuestras redes</h3>
             <div class="flex justify-center space-x-8 mb-10">
-                <a href="https://www.facebook.com/milagros.barrios.165" class="text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-white text-4xl transition transform hover:-translate-y-2">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/_u/bocaditosexpressbj" class="text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-white text-4xl transition transform hover:-translate-y-2">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@bocaditosexpressbj" class="text-brand hover:text-brand-dark dark:text-brand-light dark:hover:text-white text-4xl transition transform hover:-translate-y-2">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
+                <a href="https://www.facebook.com/milagros.barrios.165" class="text-brand hover:text-brand-dark text-4xl transition transform hover:-translate-y-2"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_u/bocaditosexpressbj" class="text-brand hover:text-brand-dark text-4xl transition transform hover:-translate-y-2"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@bocaditosexpressbj" class="text-brand hover:text-brand-dark text-4xl transition transform hover:-translate-y-2"><i class="fa-brands fa-tiktok"></i></a>
             </div>
-            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                © 2026 Bocaditos Express. | Creado por Yisus Sánchez | Todos los derechos reservados.
-            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">© 2026 Bocaditos Express. | Creado por Yisus Sánchez | Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -143,10 +88,7 @@
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
@@ -167,18 +109,9 @@
                 localStorage.setItem('theme', 'light');
             }
         }
-
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            setTheme(true);
-        } else {
-            setTheme(false);
-        }
-
-        const toggleTheme = () => {
-            const isDark = html.classList.contains('dark');
-            setTheme(!isDark);
-        };
-
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) setTheme(true);
+        else setTheme(false);
+        const toggleTheme = () => setTheme(!html.classList.contains('dark'));
         themeToggleBtn.addEventListener('click', toggleTheme);
         themeToggleBtnMobile.addEventListener('click', toggleTheme);
     </script>
